@@ -16,22 +16,18 @@ In the "data" folder there is all the data needed to run the script run_analysis
 To explain the last point. Let's say we have following piced of data:
 
 subject | activity | var1
-------
+---------- | ----------- | -----------
 1 | ACTIVITY1 | VAR1_VALUE1
-------
 1 | ACTIVITY1 | VAR1_VALUE2
-------
 1 | ACTIVITY2 | VAR_VALUE3
 
 
 Then in the file "dirty.txt" data will be saved as it is.
 In the file "tidy.txt" following data will be saved:
 
-subject activity var1
 subject | activity | var1
-------
+---------- | ----------- | -----------
 1 | ACTIVITY1 | mean(c(VAR1_VALUE1, VAR1_VALUE2))
-------
 1 | ACTIVITY2 | VAR_VALUE3
 
 That is, since the pair subject="1" and  activity="ACTIVITY1" was present twice, the mean of corresponding var1 values was taken 
